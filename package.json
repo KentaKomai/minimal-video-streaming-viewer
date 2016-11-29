@@ -1,0 +1,19 @@
+{
+  "name": "minimal-video-streaming",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KentaKomai/minimal-video-streaming-viewer.git"
+  },
+  "author": "kkomai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KentaKomai/minimal-video-streaming-viewer/issues"
+  },
+  "homepage": "https://github.com/KentaKomai/minimal-video-streaming-viewer#readme"
+}
