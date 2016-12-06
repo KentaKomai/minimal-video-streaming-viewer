@@ -3,24 +3,50 @@
   <head>
   <meta charset="UTF-8" />
   <title>minimal html5 video streaming viewer</title>
+  <style>
+      p {
+         background-color: #eee;
+         border: thin solid #777;
+         padding: 10px;
+      }
+      .video-js{
+         float:left;
+      }
+      .event-list {
+         float:left;
+         border: black;
+         margin-left: 5px;
+         width: 200px;
 
-  <link href="//vjs.zencdn.net/4.6/video-js.css" rel="stylesheet">
-  <script src="//vjs.zencdn.net/4.6/video.js"></script>
+      }
+      .control{
+         clear: both;
+      }
+  </style>
+  <link href="//vjs.zencdn.net/5.11.8/video-js.css" rel="stylesheet">
+  <link href="css/videojs.markers.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://players.brightcove.net/videojs-thumbnails/videojs.thumbnails.css">
 </head>
 <body>
-        <video id="example_video_1" class="video-js vjs-default-skin"
-          controls preload="auto" width="800" height="450" data-setup='{"example_option":true}'>
-         <source src="rtmp://s2ai314d9wwvuv.cloudfront.net/cfx/st/&mp4:encoded_video.mp4" type='rtmp/mp4' />
-         <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that
-            <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-          </p>
-        </video>
-        <video id="example_video_2" class="video-js vjs-default-skin"
-          controls preload="auto" width="800" height="450" data-setup='{"example_option":true}'>
-         <source src="rtmp://s2ai314d9wwvuv.cloudfront.net/cfx/st/&mp4:encoded_mov.mp4" type='rtmp/mp4' />
-         <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that
-            <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-          </p>
-        </video>
+
+  <div>
+    <div id="vide_overlay" style="position:absolute">
+      <span style="top:30px; left:20px;">
+        Hello
+      </span>
+    </div>
+    <video id="example_video_1" class="video-js vjs-default-skin" width="800" height="450" controls preload="auto" style="z-index:-999">
+      <source src="rtmp://s2ai314d9wwvuv.cloudfront.net/cfx/st/&mp4:encoded_video.mp4" type='rtmp/mp4' />
+      <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that
+        <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+      </p>
+    </video>
+  </div>
+</div>
+<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script src="http://vjs.zencdn.net/5.11.8/video.js"></script>
+<script src='js/videojs-markers.min.js'></script>
+<script src='https://players.brightcove.net/videojs-thumbnails/videojs.thumbnails.js'></script>
+<script src="js/video_custom.js"></script>
 </body>
 </html>
